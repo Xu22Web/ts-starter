@@ -1,0 +1,43 @@
+{
+	"name": "ts-starter",
+	"version": "1.0.0",
+	"description": "a typescript starter",
+	"author": "xu22web <https://github.com/xu22web>",
+	"bin": "dist/index.js",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"dev": "tsup --watch",
+		"build": "tsup",
+		"test": "vitest -u"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/xu22web/ts-starter.git"
+	},
+	"bugs": {
+		"url": "https://github.com/xu22web/ts-starter/issues"
+	},
+	"keywords": [
+		"typescript",
+		"starter",
+		"template"
+	],
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^20.12.8",
+		"tsup": "^8.0.2",
+		"typescript": "^5.4.5"
+	}
+}
