@@ -1,12 +1,13 @@
 {
-	"name": "ts-starter",
-	"version": "1.0.0",
-	"description": "a typescript starter",
+	"name": "pkg-placeholder",
+	"version": "0.0.0",
+	"description": "pkg-description",
 	"author": "xu22web <https://github.com/xu22web>",
 	"bin": "dist/index.js",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
+	"type": "module",
 	"files": [
 		"dist"
 	],
@@ -18,26 +19,28 @@
 		}
 	},
 	"scripts": {
+		"start": "esno src/index.ts",
 		"dev": "tsup --watch",
 		"build": "tsup",
-		"test": "vitest -u"
+		"test": "vitest",
+		"typecheck": "tsc --noEmit",
+		"release": "bumpp && npm publish"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/xu22web/ts-starter.git"
+		"url": "https://github.com/xu22web/pkg-placeholder.git"
 	},
 	"bugs": {
-		"url": "https://github.com/xu22web/ts-starter/issues"
+		"url": "https://github.com/xu22web/pkg-placeholder/issues"
 	},
-	"keywords": [
-		"typescript",
-		"starter",
-		"template"
-	],
+	"keywords": [],
+	"sideEffects": false,
 	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "^20.12.8",
+		"esno": "^4.7.0",
 		"tsup": "^8.0.2",
-		"typescript": "^5.4.5"
+		"typescript": "^5.4.5",
+		"vitest": "^1.6.0"
 	}
 }

@@ -12,5 +12,5 @@ export default defineConfig({
   clean: true,
   treeshake: true,
   platform: 'neutral',
-  external: ['vue']
+  external: []
 })
